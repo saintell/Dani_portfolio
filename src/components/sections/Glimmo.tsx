@@ -50,80 +50,54 @@ export const Glimmo = () => {
             </Reveal>
           </div>
 
-          <div className="col-span-1 lg:col-span-7 relative h-[600px] md:h-[800px] flex items-center justify-center">
+          <div className="col-span-1 lg:col-span-7 flex flex-col gap-12 lg:gap-16 justify-center w-full pt-12 lg:pt-0">
              
-             {/* Left Mobile */}
-             <Reveal delay={0.4} className="absolute left-0 md:left-[10%] top-1/2 -translate-y-1/2 w-[220px] md:w-[260px] -rotate-6 z-10">
-               <MockupFrame type="mobile" className="aspect-[9/19.5] bg-[#0E0E10] border-carbon/80 shadow-[0_0_50px_rgba(168,85,247,0.15)]">
-                 <div className="p-5 flex flex-col h-full text-white pt-14">
-                    <div className="flex justify-between items-center mb-6">
-                       <span className="font-display text-xl font-bold">Glimmo</span>
-                       <div className="w-8 h-8 rounded-full bg-white/10" />
-                    </div>
-                    {/* Search */}
-                    <div className="w-full h-10 bg-white/5 rounded-full border border-white/10 mb-6 flex items-center px-4">
-                      <span className="text-xs text-white/40">Buscar manicura, peinado...</span>
-                    </div>
-                    {/* Categories */}
-                    <div className="flex gap-3 overflow-x-auto no-scrollbar mb-6 pb-2">
-                       {['Uñas', 'Cabello', 'Maquillaje', 'Spa'].map(c => (
-                         <div key={c} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs whitespace-nowrap">{c}</div>
-                       ))}
-                    </div>
-                    {/* Active Cards */}
-                    <span className="text-sm font-semibold mb-4">Profesionales cerca</span>
-                    <div className="flex flex-col gap-4">
-                       {[1,2].map(i => (
-                         <div key={i} className="bg-white/5 rounded-2xl p-4 border border-white/10 flex gap-3">
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-tr from-brand to-brand-light flex-shrink-0" />
-                            <div className="flex flex-col justify-center gap-1">
-                               <span className="font-semibold text-sm">María S.</span>
-                               <span className="text-[10px] text-white/50">Manicurista • 4.9 ★</span>
-                            </div>
-                         </div>
-                       ))}
-                    </div>
-                 </div>
-               </MockupFrame>
+             {/* App Usuario */}
+             <Reveal delay={0.4} className="w-full rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
+               <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Usuario</h4>
+               <img src="/assets/images/glimmo/Glimmo-ui usuario.png" alt="Glimmo UI Usuario" className="w-full h-auto object-contain mx-auto" />
              </Reveal>
 
-             {/* Right Mobile */}
-             <Reveal delay={0.5} className="absolute right-0 md:right-[15%] top-1/2 -translate-y-[45%] w-[240px] md:w-[280px] rotate-3 z-20">
-                <MockupFrame type="mobile" className="aspect-[9/19.5] bg-bg-sec border-carbon shadow-[0_30px_60px_rgba(0,0,0,0.4)]">
-                 <div className="p-5 flex flex-col h-full text-white pt-14">
-                    {/* Header profile */}
-                    <div className="w-full aspect-square rounded-2xl bg-white/5 mb-4 relative overflow-hidden flex items-end p-4">
-                       <Badge className="absolute top-4 right-4 bg-bg-main text-white border-white/10 shadow-sm font-bold">4.9 ★</Badge>
-                       <span className="text-white font-display text-2xl font-bold drop-shadow-md">María S.</span>
-                    </div>
-                    <div className="flex gap-2 mb-6">
-                      <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium">Manicura</div>
-                      <div className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium">Pedicura</div>
-                    </div>
-
-                    <span className="text-sm font-semibold mb-3">Servicios populares</span>
-                    <div className="flex flex-col gap-3 flex-1 overflow-y-auto">
-                       {[1,2,3].map(i => (
-                         <div key={i} className="bg-bg-main border text-left border-white/5 rounded-xl p-3 flex justify-between items-center shadow-sm">
-                            <div className="flex flex-col">
-                               <span className="font-semibold text-sm">{i===1 ? 'Manicura Semipermanente' : i===2 ? 'Acrílicas' : 'Pedicura Spa'}</span>
-                               <span className="text-xs text-gray-mid">45 min</span>
-                            </div>
-                            <span className="font-bold text-brand-light">${i===1 ? '45' : i===2 ? '60' : '55'}</span>
-                         </div>
-                       ))}
-                    </div>
-
-                    <div className="w-full mt-4 bg-brand text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-brand/20">
-                      Reservar Ahora
-                    </div>
-                 </div>
-               </MockupFrame>
+             {/* App Experto */}
+             <Reveal delay={0.5} className="w-full rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
+                 <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Experto</h4>
+                 <img src="/assets/images/glimmo/Glimmo-ui experto.png" alt="Glimmo UI Experto" className="w-full h-auto object-contain mx-auto" />
              </Reveal>
 
           </div>
 
         </div>
+        
+        {/* Additional Images */}
+        <div className="mt-32 flex flex-col gap-24">
+           {/* Architecture */}
+           <div className="flex flex-col gap-12">
+             <Reveal>
+               <h3 className="text-3xl font-display font-medium">Arquitectura de la Plataforma</h3>
+             </Reveal>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Reveal delay={0.1} className="w-full rounded-2xl overflow-hidden border border-white/5 bg-white/5 p-4 md:p-8">
+                  <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Usuario</h4>
+                  <img src="/assets/images/glimmo/Glimmo-arquitectura usuario.png" alt="Arquitectura Usuario" className="w-full h-auto object-contain mx-auto" />
+                </Reveal>
+                <Reveal delay={0.2} className="w-full rounded-2xl overflow-hidden border border-white/5 bg-white/5 p-4 md:p-8">
+                  <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Experto</h4>
+                  <img src="/assets/images/glimmo/Glimmo-arquitectura experto.png" alt="Arquitectura Experto" className="w-full h-auto object-contain mx-auto" />
+                </Reveal>
+             </div>
+           </div>
+
+           {/* Mobile Screens Ext */}
+           <div className="flex flex-col gap-12 items-center">
+             <Reveal>
+               <h3 className="text-3xl font-display font-medium text-center">Flujo de Autenticación</h3>
+             </Reveal>
+             <Reveal delay={0.1} className="w-full max-w-lg rounded-2xl flex justify-center overflow-hidden border border-white/5 bg-white/5 p-4 md:p-6">
+                 <img src="/assets/images/glimmo/Glimmo-login.png" alt="Glimmo Login" className="w-auto h-auto max-h-[400px] object-contain mx-auto" />
+             </Reveal>
+           </div>
+        </div>
+
       </div>
     </section>
   );

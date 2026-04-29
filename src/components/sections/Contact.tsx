@@ -53,7 +53,7 @@ const Footer = () => (
     <div className="flex items-center gap-6">
       <span>Portfolio 2026</span>
       <a href="mailto:daniela.pantojacal@gmail.com" className="hover:text-white transition-colors">Email</a>
-      <div className="font-display text-sm font-bold text-white/20">DP</div>
+      <AnimatedMonogram className="text-xl !text-white opacity-20 relative top-1" />
     </div>
   </footer>
 );

@@ -25,39 +25,16 @@ export const FruztyArchitecture = () => {
           </Reveal>
           
           <div className="flex-1">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {nodes.map((node, i) => (
-                <Reveal key={node} delay={i * 0.05}>
-                  <div className="h-24 glass rounded-2xl flex flex-col items-center justify-center gap-2 border border-white/5 hover:border-brand/30 transition-colors">
-                    <Box className="w-5 h-5 text-gray-mid" />
-                    <span className="text-xs font-medium tracking-wider uppercase text-gray-light">{node}</span>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            <Reveal delay={0.1} className="w-full rounded-2xl overflow-hidden border border-white/5">
+               <img src="/assets/images/fruzty/arquitectura 1.png" alt="Arquitectura" className="w-full h-auto object-cover" />
+            </Reveal>
           </div>
         </div>
 
         {/* User Flow Diagram */}
         <Reveal delay={0.2} className="w-full">
-          <div className="w-full overflow-x-auto pb-8 no-scrollbar">
-            <div className="flex items-center min-w-[800px] w-full">
-              {steps.map((step, i) => (
-                <React.Fragment key={step}>
-                  <div className="flex flex-col items-center gap-4 relative group">
-                    <div className="w-12 h-12 rounded-full border border-brand/40 bg-brand/10 flex items-center justify-center font-mono text-sm text-brand group-hover:scale-110 transition-transform">
-                      {i + 1}
-                    </div>
-                    <span className="text-xs font-medium uppercase tracking-widest text-gray-light whitespace-nowrap">{step}</span>
-                  </div>
-                  {i < steps.length - 1 && (
-                    <div className="flex-1 h-px bg-gradient-to-r from-brand/20 via-brand/40 to-brand/20 mx-4 flex items-center justify-center relative">
-                       <ArrowRight className="w-4 h-4 text-brand absolute" />
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
+          <div className="w-full rounded-2xl overflow-hidden border border-white/5 bg-white/5 p-4 md:p-8">
+             <img src="/assets/images/fruzty/flujos de usuario.png" alt="Flujos de Usuario" className="w-full h-auto object-contain mx-auto" />
           </div>
         </Reveal>
 

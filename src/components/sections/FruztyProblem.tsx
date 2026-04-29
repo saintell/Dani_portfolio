@@ -12,7 +12,7 @@ export const FruztyProblem = () => {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 mb-20">
           
           {/* Problema */}
           <div className="flex flex-col gap-8">
@@ -73,6 +73,10 @@ export const FruztyProblem = () => {
           </div>
 
         </div>
+
+        <Reveal delay={0.5} className="w-full mt-12 rounded-2xl overflow-hidden border border-white/5 opacity-90 transition-opacity">
+          <img src="/assets/images/fruzty/Fruzty- el problema.png" alt="El problema illustración" className="w-full h-auto object-cover" />
+        </Reveal>
       </div>
     </section>
   );

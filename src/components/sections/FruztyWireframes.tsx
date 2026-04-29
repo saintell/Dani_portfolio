@@ -25,51 +25,18 @@ export const FruztyWireframes = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               
               {/* Back card */}
-              <Reveal delay={0.2} className="absolute -left-4 md:-left-12 top-[10%] w-[60%] aspect-video glass rounded-2xl p-4 border border-white/10 opacity-60 -rotate-6 scale-90">
-                <div className="w-full h-full border border-dashed border-white/20 rounded-xl p-4 flex flex-col gap-4">
-                  <div className="w-1/3 h-4 bg-white/10 rounded" />
-                  <div className="w-full flex-1 bg-white/5 rounded" />
-                </div>
+              <Reveal delay={0.2} className="absolute -left-4 md:-left-12 top-[10%] w-[60%] aspect-video rounded-2xl overflow-hidden border border-white/10 opacity-70 -rotate-6 scale-90 shadow-2xl">
+                <img src="/assets/images/fruzty/Wireframes 01.png" alt="Wireframe 1" className="w-full h-full object-cover object-left-top" />
               </Reveal>
 
               {/* Back right card */}
-              <Reveal delay={0.3} className="absolute -right-4 md:-right-12 bottom-[10%] w-[50%] aspect-square glass rounded-2xl p-4 border border-white/10 opacity-50 rotate-3 scale-95">
-                <div className="w-full h-full border border-dashed border-white/20 rounded-xl flex items-center justify-center flex-col gap-4">
-                  <div className="w-24 h-24 rounded-full border-4 border-white/10 border-t-white/30" />
-                  <div className="w-1/2 h-3 bg-white/10 rounded" />
-                  <div className="w-2/3 h-3 bg-white/5 rounded" />
-                </div>
+              <Reveal delay={0.3} className="absolute -right-4 md:-right-12 bottom-[10%] w-[50%] aspect-video rounded-2xl overflow-hidden border border-white/10 opacity-80 rotate-3 scale-95 shadow-2xl">
+                <img src="/assets/images/fruzty/Wireframes 02.png" alt="Wireframe 2" className="w-full h-full object-cover object-left-top" />
               </Reveal>
 
               {/* Main front card */}
-              <Reveal delay={0.4} className="relative z-10 w-[80%] md:w-[70%] aspect-[16/11] bg-bg-sec rounded-2xl shadow-2xl p-4 flex gap-4 rotate-1 border border-white/5">
-                {/* Sidebar */}
-                <div className="w-1/4 h-full border-r border-white/5 pr-4 flex flex-col gap-3">
-                  <div className="w-8 h-8 rounded bg-white/10 mb-4" />
-                  <div className="w-full h-4 rounded bg-white/5" />
-                  <div className="w-3/4 h-4 rounded bg-white/5" />
-                  <div className="w-5/6 h-4 rounded bg-white/5" />
-                </div>
-                {/* Main */}
-                <div className="flex-1 flex flex-col gap-4">
-                  <div className="w-1/3 h-6 rounded bg-white/10" />
-                  <div className="flex gap-4">
-                    <div className="flex-1 h-20 rounded bg-white/5" />
-                    <div className="flex-1 h-20 rounded bg-white/5" />
-                    <div className="flex-1 h-20 rounded bg-white/5" />
-                  </div>
-                  <div className="flex-1 w-full rounded bg-white/5 flex flex-col p-4 gap-3">
-                    <div className="w-full h-8 bg-white/5 rounded" />
-                    <div className="w-full flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-white/10" />
-                      <div className="flex-1 h-8 rounded bg-white/5" />
-                    </div>
-                     <div className="w-full flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-white/10" />
-                      <div className="flex-1 h-8 rounded bg-white/5" />
-                    </div>
-                  </div>
-                </div>
+              <Reveal delay={0.4} className="relative z-10 w-[80%] md:w-[70%] aspect-[16/11] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden rotate-1 border border-white/10">
+                <img src="/assets/images/fruzty/wireframes 3.png" alt="Wireframe 3" className="w-full h-full object-cover object-left-top bg-bg-sec" />
               </Reveal>
 
             </div>

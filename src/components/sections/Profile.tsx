@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal, SectionTag } from '@/lib/utils';
+import { AnimatedMonogram } from '../ui/AnimatedMonogram';
 
 export const Profile = () => {
   const expertise = [
@@ -21,8 +22,8 @@ export const Profile = () => {
               <div className="absolute top-1/4 left-1/4 w-[120%] h-[120%] bg-gradient-to-br from-brand/20 to-transparent rounded-full blur-[80px]" />
               <div className="absolute inset-0 bg-noise opacity-50" />
               
-              <div className="relative z-10 flex flex-col gap-2">
-                <div className="font-display text-8xl font-bold text-white/10 tracking-tighter">DP</div>
+              <div className="relative z-10 flex flex-col items-center gap-2">
+                <AnimatedMonogram className="text-9xl !text-white opacity-20 !filter-none" />
                 <div className="h-[1px] w-full bg-gradient-to-r from-white/20 to-transparent my-4" />
                 <div className="caption-label">Industrial Designer</div>
                 <div className="caption-label text-brand-light">UI/UX Designer</div>
