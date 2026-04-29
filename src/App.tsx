@@ -11,6 +11,7 @@ import { FruztyArchitecture } from './components/sections/FruztyArchitecture';
 import { FruztyWireframes } from './components/sections/FruztyWireframes';
 import { FruztyUI } from './components/sections/FruztyUI';
 import { Glimmo } from './components/sections/Glimmo';
+import { PCA } from './components/sections/PCA';
 import { Contact } from './components/sections/Contact';
 
 const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
@@ -83,6 +84,9 @@ export default function App() {
           </SectionWrapper>
           <SectionWrapper>
             <Glimmo />
+          </SectionWrapper>
+          <SectionWrapper>
+            <PCA />
           </SectionWrapper>
         </div>
         <SectionWrapper>

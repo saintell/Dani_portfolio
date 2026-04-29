@@ -19,6 +19,7 @@ export const Navbar = () => {
         <a href="#perfil" className="text-white border-b border-brand pb-1">Perfil</a>
         <a href="#fruzty" className="hover:text-white transition-colors">Fruzty</a>
         <a href="#glimmo" className="hover:text-white transition-colors">Glimmo</a>
+        <a href="#pca" className="hover:text-white transition-colors">PCA</a>
         <a href="#contacto" className="hover:text-white transition-colors">Contacto</a>
       </nav>
     </motion.header>

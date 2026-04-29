@@ -6,9 +6,10 @@ interface MockupFrameProps {
   children: React.ReactNode;
   className?: string;
   type?: 'browser' | 'mobile' | 'bare';
+  url?: string;
 }
 
-export const MockupFrame = ({ children, className, type = 'browser' }: MockupFrameProps) => {
+export const MockupFrame = ({ children, className, type = 'browser', url = 'app.fruzty.com' }: MockupFrameProps) => {
   if (type === 'mobile') {
     return (
       <div className={cn("relative mx-auto rounded-[3rem] border-[8px] border-carbon bg-bg-main overflow-hidden shadow-2xl overflow-y-auto no-scrollbar", className)}>
@@ -31,7 +32,7 @@ export const MockupFrame = ({ children, className, type = 'browser' }: MockupFra
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/30" />
           </div>
           <div className="bg-bg-main px-4 py-1 rounded text-[9px] text-gray-mid ml-4 border border-white/5">
-             app.fruzty.com
+             {url}
           </div>
         </div>
         <div className="flex-1 overflow-hidden relative">
