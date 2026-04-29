@@ -371,16 +371,24 @@ export const PCA = () => {
                <h4 className="text-xl font-display font-medium text-white">Página de Soluciones</h4>
                <p className="text-sm text-gray-mid mb-4">Layout limpio para módulos de automatización, analítica y monitoreo.</p>
                <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/16]">
-                 <div className="w-full h-full bg-[#f8f9fa] flex flex-col p-6 overflow-hidden">
-                    <div className="w-24 h-4 bg-gray-200 rounded mb-8" />
-                    <div className="w-3/4 h-8 bg-gray-300 rounded mb-4" />
-                    <div className="w-1/2 h-3 bg-gray-200 rounded mb-10" />
+                 <div className="w-full h-full bg-[#f8f9fa] flex flex-col p-6 md:p-8 overflow-hidden text-gray-800">
+                    <div className="text-[10px] font-bold text-brand uppercase tracking-wider mb-4">Soluciones</div>
+                    <div className="text-2xl md:text-3xl font-display font-bold leading-tight mb-2 text-gray-900">Transformación Inteligente</div>
+                    <div className="text-xs text-gray-500 mb-8 max-w-[80%]">Optimiza cada etapa de tu proceso industrial con nuestras soluciones modulares.</div>
+                    
                     <div className="grid grid-cols-2 gap-4 flex-1">
-                      {[1,2,3,4].map(i => (
-                        <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex flex-col gap-3">
-                           <div className="w-8 h-8 rounded-lg bg-[#5b21b6]/10 flex-shrink-0" />
-                           <div className="w-full h-3 bg-gray-200 rounded" />
-                           <div className="w-2/3 h-2 bg-gray-100 rounded" />
+                      {[
+                        { title: "Automatización", desc: "Control de procesos" },
+                        { title: "Analítica", desc: "Datos en tiempo real" },
+                        { title: "Monitoreo", desc: "Supervisión 24/7" },
+                        { title: "Dashboards", desc: "Visualización clave" }
+                      ].map((item, i) => (
+                        <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex flex-col gap-2">
+                           <div className="w-8 h-8 rounded-lg bg-brand/10 flex items-center justify-center mb-1">
+                             <div className="w-3 h-3 bg-brand/60 rounded-sm" />
+                           </div>
+                           <div className="text-sm font-semibold text-gray-800">{item.title}</div>
+                           <div className="text-[10px] text-gray-500">{item.desc}</div>
                         </div>
                       ))}
                     </div>
@@ -391,30 +399,31 @@ export const PCA = () => {
                <h4 className="text-xl font-display font-medium text-white">Página de Contacto</h4>
                <p className="text-sm text-gray-mid mb-4">Formulario optimizado, datos claros y un bloque de confianza para reforzar credibilidad.</p>
                <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/16]">
-                 <div className="w-full h-full bg-white flex flex-col p-6 overflow-hidden relative">
-                    <div className="w-32 h-6 bg-gray-300 rounded mb-2" />
-                    <div className="w-2/3 h-3 bg-gray-100 rounded mb-10" />
+                 <div className="w-full h-full bg-white flex flex-col p-6 md:p-8 overflow-hidden relative text-gray-800">
+                    <div className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2">Hablemos</div>
+                    <div className="text-xs text-gray-500 mb-8">Déjanos un mensaje y nuestro equipo de ingeniería te contactará.</div>
                     
                     <div className="flex gap-6 flex-1">
                       {/* Form */}
                       <div className="w-3/5 flex flex-col gap-4">
                         <div className="grid grid-cols-2 gap-3">
-                           <div className="h-10 bg-gray-50 border border-gray-100 rounded-lg" />
-                           <div className="h-10 bg-gray-50 border border-gray-100 rounded-lg" />
+                           <div className="h-9 px-3 bg-gray-50 border border-gray-200 rounded-lg text-[10px] flex items-center text-gray-400">Nombre completo</div>
+                           <div className="h-9 px-3 bg-gray-50 border border-gray-200 rounded-lg text-[10px] flex items-center text-gray-400">Empresa</div>
                         </div>
-                        <div className="h-10 bg-gray-50 border border-gray-100 rounded-lg" />
-                        <div className="h-24 bg-gray-50 border border-gray-100 rounded-lg" />
-                        <div className="w-32 h-10 bg-[#5b21b6] rounded-lg mt-2" />
+                        <div className="h-9 px-3 bg-gray-50 border border-gray-200 rounded-lg text-[10px] flex items-center text-gray-400">Email corporativo</div>
+                        <div className="h-16 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-[10px] text-gray-400">¿Cómo podemos ayudarte?</div>
+                        <div className="w-28 h-9 bg-brand text-white rounded-lg flex items-center justify-center text-[10px] font-medium mt-1">Enviar mensaje</div>
                       </div>
                       {/* Info side */}
-                      <div className="w-2/5 flex flex-col gap-6">
-                         <div className="p-4 bg-gray-50 rounded-xl flex flex-col gap-3">
-                            <div className="w-full h-3 bg-gray-200 rounded" />
-                            <div className="w-2/3 h-2 bg-gray-200 rounded" />
+                      <div className="w-2/5 flex flex-col gap-4">
+                         <div className="p-4 bg-gray-50 rounded-xl flex flex-col gap-1 border border-gray-100">
+                            <div className="text-[10px] font-bold text-gray-800 mb-1">Contacto directo</div>
+                            <div className="text-[9px] text-gray-500">info@pca.com.co</div>
+                            <div className="text-[9px] text-gray-500">+57 300 000 0000</div>
                          </div>
-                         <div className="p-4 bg-[#5b21b6]/5 border border-[#5b21b6]/10 rounded-xl flex flex-col gap-2">
-                            <div className="w-16 h-4 bg-[#5b21b6]/20 rounded mb-1" />
-                            <div className="w-full h-2 bg-[#5b21b6]/10 rounded" />
+                         <div className="p-4 bg-brand/5 border border-brand/10 rounded-xl flex flex-col gap-2">
+                            <div className="text-[10px] font-bold text-brand">Confianza</div>
+                            <div className="text-[9px] text-gray-600 leading-relaxed">Más de 15 años optimizando procesos industriales.</div>
                          </div>
                       </div>
                     </div>
