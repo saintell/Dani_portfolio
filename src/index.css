@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@theme {
+  --color-bg-main: #0E0E10;
+  --color-bg-sec: #141416;
+  --color-carbon: #111112;
+  --color-brand: #A855F7;
+  --color-brand-light: #C084FC;
+  --color-brand-dark: #2A1833;
+  --color-white: #FFFFFF;
+  --color-gray-light: #D8D5DE;
+  --color-gray-mid: #8F8A99;
+  --color-fruzty-green: #72A83D;
+  --color-fruzty-dark: #3F6F24;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-bg-main text-white font-body selection:bg-brand selection:text-white antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Utility classes for subtle noise background */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-bg-sec/60 backdrop-blur-md border border-white/5;
+  }
+
+  .caption-label {
+    @apply font-body text-[10px] sm:text-xs uppercase tracking-widest text-gray-mid font-medium;
+  }
+}
+
