@@ -53,13 +53,13 @@ export const Glimmo = () => {
           <div className="col-span-1 lg:col-span-7 flex flex-col gap-12 lg:gap-16 justify-center w-full pt-12 lg:pt-0">
              
              {/* App Usuario */}
-             <Reveal delay={0.4} className="w-full rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
+             <Reveal delay={0.4} className="w-full max-w-2xl mx-auto rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
                <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Usuario</h4>
                <img src="/assets/images/glimmo/Glimmo-ui usuario.png" alt="Glimmo UI Usuario" className="w-full h-auto object-contain mx-auto" />
              </Reveal>
 
              {/* App Experto */}
-             <Reveal delay={0.5} className="w-full rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
+             <Reveal delay={0.5} className="w-full max-w-2xl mx-auto rounded-2xl overflow-hidden bg-white/5 border border-white/5 p-4 md:p-8">
                  <h4 className="text-sm uppercase tracking-widest font-semibold text-white mb-6 text-center">App Experto</h4>
                  <img src="/assets/images/glimmo/Glimmo-ui experto.png" alt="Glimmo UI Experto" className="w-full h-auto object-contain mx-auto" />
              </Reveal>

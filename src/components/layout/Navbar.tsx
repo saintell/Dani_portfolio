@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { AnimatedMonogram } from '../ui/AnimatedMonogram';
 
 export const Navbar = () => {
+  const [activeSection, setActiveSection] = useState('perfil');
+
+  useEffect(() => {
+    const sections = ['perfil', 'asistente', 'fruzty', 'glimmo', 'pca', 'contacto'];
+    
+    const handleScroll = () => {
+      let currentSection = sections[0];
+      
+      // Also check if we're at the bottom of the page
+      const isAtBottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+      
+      if (isAtBottom) {
+        setActiveSection('contacto');
+        return;
+      }
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is above the middle of the viewport
+          if (rect.top <= window.innerHeight / 3) {
+            currentSection = section;
+          }
+        }
+      }
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <motion.header 
       initial={{ opacity: 0, y: -20 }}
@@ -16,12 +51,28 @@ export const Navbar = () => {
         <span className="text-[10px] tracking-[0.2em] text-gray-mid uppercase mt-1">Daniela Pantoja</span>
       </div>
       <nav className="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.15em] text-gray-mid pointer-events-auto">
-        <a href="#perfil" className="text-white border-b border-brand pb-1">Perfil</a>
-        <a href="#asistente" className="hover:text-white transition-colors">Asistente</a>
-        <a href="#fruzty" className="hover:text-white transition-colors">Fruzty</a>
-        <a href="#glimmo" className="hover:text-white transition-colors">Glimmo</a>
-        <a href="#pca" className="hover:text-white transition-colors">PCA</a>
-        <a href="#contacto" className="hover:text-white transition-colors">Contacto</a>
+        {[
+          { id: 'perfil', label: 'Perfil' },
+          { id: 'asistente', label: 'Asistente' },
+          { id: 'fruzty', label: 'Fruzty' },
+          { id: 'glimmo', label: 'Glimmo' },
+          { id: 'pca', label: 'PCA' },
+          { id: 'contacto', label: 'Contacto' },
+        ].map((item) => (
+          <a 
+            key={item.id}
+            href={`#${item.id}`} 
+            onClick={() => setActiveSection(item.id)}
+            className={cn(
+              "transition-colors pb-1",
+              activeSection === item.id 
+                ? "text-white border-b border-brand" 
+                : "hover:text-white border-b border-transparent"
+            )}
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
     </motion.header>
   );

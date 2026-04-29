@@ -348,29 +348,29 @@ export const PCA = () => {
         <div className="flex flex-col gap-32 pt-12">
           
           {/* Mockup 1: Home & 2: Servicios */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <Reveal className="flex flex-col gap-6">
                <h4 className="text-xl font-display font-medium text-white">Homepage</h4>
                <p className="text-sm text-gray-mid mb-4">Hero con propuesta de valor clara, CTA principal hacia contacto y exploración rápida de servicios.</p>
-               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/20]">
+               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/12]">
                 <img src="/assets/images/pca/PCA HOME 02.png" alt="PCA Homepage" className="w-full h-full object-cover object-top" />
               </MockupFrame>
             </Reveal>
             <Reveal delay={0.2} className="flex flex-col gap-6">
                <h4 className="text-xl font-display font-medium text-white">Página de Servicios</h4>
                <p className="text-sm text-gray-mid mb-4">Grid de servicios bien estructurado con cards accesibles, iconografía clara y texto resumido.</p>
-               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/20]">
+               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/12]">
                 <img src="/assets/images/pca/PCA SERVICIOS.png" alt="PCA Servicios" className="w-full h-full object-cover object-top" />
               </MockupFrame>
             </Reveal>
           </div>
 
           {/* Mockup 3: Soluciones & Mockup 4: Contacto (Simulated in HTML/CSS) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
              <Reveal className="flex flex-col gap-6">
                <h4 className="text-xl font-display font-medium text-white">Página de Soluciones</h4>
                <p className="text-sm text-gray-mid mb-4">Layout limpio para módulos de automatización, analítica y monitoreo.</p>
-               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/16]">
+               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/12]">
                  <div className="w-full h-full bg-[#f8f9fa] flex flex-col p-6 md:p-8 overflow-hidden text-gray-800">
                     <div className="text-[10px] font-bold text-brand uppercase tracking-wider mb-4">Soluciones</div>
                     <div className="text-2xl md:text-3xl font-display font-bold leading-tight mb-2 text-gray-900">Transformación Inteligente</div>
@@ -398,7 +398,7 @@ export const PCA = () => {
             <Reveal delay={0.2} className="flex flex-col gap-6">
                <h4 className="text-xl font-display font-medium text-white">Página de Contacto</h4>
                <p className="text-sm text-gray-mid mb-4">Formulario optimizado, datos claros y un bloque de confianza para reforzar credibilidad.</p>
-               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/16]">
+               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/12]">
                  <div className="w-full h-full bg-white flex flex-col p-6 md:p-8 overflow-hidden relative text-gray-800">
                     <div className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2">Hablemos</div>
                     <div className="text-xs text-gray-500 mb-8">Déjanos un mensaje y nuestro equipo de ingeniería te contactará.</div>
@@ -433,18 +433,18 @@ export const PCA = () => {
           </div>
 
           {/* Additional Blog Section that uses the provided image */}
-          <div className="grid grid-cols-1 gap-12">
+          <div className="grid grid-cols-1 gap-12 max-w-5xl mx-auto w-full">
              <Reveal className="flex flex-col gap-6">
                <h4 className="text-xl font-display font-medium text-white">Sobre Nosotros / Blog</h4>
                <p className="text-sm text-gray-mid mb-4">Módulos para presentar los valores, enfoque diferencial y noticias de la industria (Diseño adaptado).</p>
-               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/10]">
+               <MockupFrame type="browser" url="pca.com.co" className="aspect-[16/16] md:aspect-[16/8]">
                 <img src="/assets/images/pca/PCA BLOG.png" alt="PCA Blog" className="w-full h-auto object-cover object-top" />
               </MockupFrame>
             </Reveal>
           </div>
 
           {/* Mockup 5: Collage Editorial */}
-          <Reveal className="w-full relative h-[600px] md:h-[800px] bg-bg-sec rounded-3xl overflow-hidden border border-white/5 flex items-center justify-center p-6 md:p-12">
+          <Reveal className="w-full relative h-[400px] md:h-[600px] max-w-5xl mx-auto bg-bg-sec rounded-3xl overflow-hidden border border-white/5 flex items-center justify-center p-6 md:p-12">
              <div className="absolute inset-0 bg-brand/5 mix-blend-screen pointer-events-none" />
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-light/10 blur-[120px] rounded-full pointer-events-none" />
              

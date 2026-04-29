@@ -74,7 +74,7 @@ export const FruztyProblem = () => {
 
         </div>
 
-        <Reveal delay={0.5} className="w-full mt-12 rounded-2xl overflow-hidden border border-white/5 opacity-90 transition-opacity">
+        <Reveal delay={0.5} className="w-full max-w-4xl mx-auto mt-12 rounded-2xl overflow-hidden border border-white/5 opacity-90 transition-opacity">
           <img src="/assets/images/fruzty/Fruzty- el problema.png" alt="El problema illustración" className="w-full h-auto object-cover" />
         </Reveal>
       </div>
