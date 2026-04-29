@@ -59,8 +59,15 @@ export const FruztyUI = () => {
               <div className="flex touch-pan-y items-center">
                 {images.map((src, index) => (
                   <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_80%] lg:flex-[0_0_70%] pl-4 md:pl-8 first:pl-0" key={index}>
-                    <MockupFrame className="aspect-[16/10] overflow-hidden p-0 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                      <img src={src} alt={`UI Desktop ${index + 1}`} className="w-full h-full object-cover object-top" />
+                    <MockupFrame 
+                      className="aspect-[16/10] overflow-hidden p-0 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-[#0a0a0a]"
+                      type={src.includes('ui 7') || src.includes('regenerated') ? 'bare' : 'browser'}
+                    >
+                      <img 
+                        src={src} 
+                        alt={`UI Desktop ${index + 1}`} 
+                        className={`w-full h-full ${(src.includes('regenerated') || src.includes('ui 7')) ? 'object-contain py-4' : 'object-cover object-top'}`} 
+                      />
                     </MockupFrame>
                   </div>
                 ))}

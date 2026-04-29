@@ -5,7 +5,7 @@ import { AnimatedMonogram } from '../ui/AnimatedMonogram';
 
 export const Contact = () => {
   return (
-    <section id="contacto" className="py-32 md:py-48 px-6 md:px-12 bg-bg-main relative border-t border-white/5 overflow-hidden">
+    <section id="contacto" className="pt-32 pb-8 md:pt-48 md:pb-12 px-6 md:px-12 bg-bg-main relative border-t border-white/5 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[500px] bg-brand/10 rounded-full blur-[150px] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center">
@@ -30,7 +30,7 @@ export const Contact = () => {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <a href="mailto:daniela.pantojacal@gmail.com" className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-white text-carbon hover:bg-brand hover:text-white transition-all text-base font-semibold uppercase tracking-wider group shadow-xl">
+          <a href="https://wa.link/d5pcny" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-white text-carbon hover:bg-brand hover:text-white transition-all text-base font-semibold uppercase tracking-wider group shadow-xl">
             Conversemos
             <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
           </a>
@@ -53,7 +53,7 @@ const Footer = () => (
     <div className="flex items-center gap-6">
       <span>Portfolio 2026</span>
       <a href="mailto:daniela.pantojacal@gmail.com" className="hover:text-white transition-colors">Email</a>
-      <AnimatedMonogram className="text-xl !text-white opacity-20 relative top-1" />
+      <AnimatedMonogram className="text-xl !text-white opacity-20" />
     </div>
   </footer>
 );
