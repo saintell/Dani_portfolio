@@ -299,7 +299,7 @@ export const PCA = () => {
                          <span className="text-xs font-semibold text-white">Servicios</span>
                        </div>
                        <ul className="flex flex-col gap-2 pl-4 border-l border-white/10 ml-4 py-2">
-                         {["Transformación digital", "Automatización", "Analítica de datos", "Consultoría"].map(item => (
+                         {["Automatización Industrial", "Desarrollo de Software", "Transformación Digital Industrial", "Ciberseguridad"].map(item => (
                            <li key={item} className="text-[10px] text-gray-mid relative before:content-[''] before:absolute before:-left-4 before:top-1/2 before:w-3 before:h-px before:bg-white/10">{item}</li>
                          ))}
                        </ul>
