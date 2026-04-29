@@ -17,6 +17,7 @@ export const Navbar = () => {
       </div>
       <nav className="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.15em] text-gray-mid pointer-events-auto">
         <a href="#perfil" className="text-white border-b border-brand pb-1">Perfil</a>
+        <a href="#asistente" className="hover:text-white transition-colors">Asistente</a>
         <a href="#fruzty" className="hover:text-white transition-colors">Fruzty</a>
         <a href="#glimmo" className="hover:text-white transition-colors">Glimmo</a>
         <a href="#pca" className="hover:text-white transition-colors">PCA</a>

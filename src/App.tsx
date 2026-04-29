@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
 import { Profile } from './components/sections/Profile';
+import { AsistenteDigital } from './components/sections/AsistenteDigital';
 import { FruztyIntro } from './components/sections/FruztyIntro';
 import { FruztyProblem } from './components/sections/FruztyProblem';
 import { FruztyPersonas } from './components/sections/FruztyPersonas';
@@ -64,6 +65,9 @@ export default function App() {
           <Profile />
         </SectionWrapper>
         <div id="proyectos">
+          <SectionWrapper>
+            <AsistenteDigital />
+          </SectionWrapper>
           <SectionWrapper>
             <FruztyIntro />
           </SectionWrapper>
