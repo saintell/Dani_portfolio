@@ -1,6 +1,6 @@
 import React from 'react';
 import { Reveal } from '@/lib/utils';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Download } from 'lucide-react';
 import { AnimatedMonogram } from '../ui/AnimatedMonogram';
 
 export const Contact = () => {
@@ -29,10 +29,14 @@ export const Contact = () => {
           </p>
         </Reveal>
 
-        <Reveal delay={0.3}>
+        <Reveal delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="https://wa.link/d5pcny" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-white text-carbon hover:bg-brand hover:text-white transition-all text-base font-semibold uppercase tracking-wider group shadow-xl">
             Conversemos
             <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+          </a>
+          <a href="/SERVICIOS-DANIELA-PANTOJA.pdf" download target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-bg-sec border border-brand/30 text-white hover:bg-brand/10 hover:border-brand/50 transition-all text-base font-semibold uppercase tracking-wider group">
+            Descargar Servicios
+            <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
           </a>
         </Reveal>
       </div>

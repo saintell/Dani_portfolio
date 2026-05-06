@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Download } from 'lucide-react';
 import { Badge } from '@/lib/utils';
 import { AnimatedMonogram } from '../ui/AnimatedMonogram';
 
@@ -43,6 +43,26 @@ export const Hero = () => {
           <p className="mt-8 md:mt-12 max-w-md text-gray-mid text-sm leading-relaxed border-l border-brand pl-6">
             Diseñadora Industrial & UI/UX. Interfaces claras para sistemas complejos. Especializada en software empresarial y entornos industriales críticos.
           </p>
+          
+          <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+            <a 
+              href="#contacto" 
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-3 px-8 py-3.5 rounded-full bg-white text-carbon hover:bg-brand hover:text-white transition-all text-sm font-bold uppercase tracking-wider group"
+            >
+              Conversemos
+              <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+            </a>
+            <a 
+              href="/SERVICIOS-DANIELA-PANTOJA.pdf" 
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-3 px-8 py-3.5 rounded-full bg-bg-sec border border-brand/30 text-white hover:bg-brand/10 hover:border-brand/50 transition-all text-sm font-bold uppercase tracking-wider group"
+            >
+              Ver mis Servicios
+              <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
